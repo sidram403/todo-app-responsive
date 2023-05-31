@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a{
+  text-decoration: none;
+  color: gold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App{
+  background-color: white;
+  color: black;
   min-height: 100vh;
+}
+
+.sidebar{
+  margin-top: 64px;
+}
+
+.container{
   display: flex;
+  height: 80vh;
+  color: black;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 50px 10px 10px 10px;
+  font-size: 20px;
+}
+.todoForm{
+  display: flex;
+  width: 60%;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.todoForm > input{
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid #1976d2;
+  color: #1976d2;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.todoForm > button{
+  width: 15%;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #1976d2;
   color: white;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.dateDisplay{
+  margin-left: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.allTodo{
+  list-style: none;
+}
+.done {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: line-through;
+}
+
+  .drawer {
+    width: 240px;
+    flex-shrink: 0;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .drawer .MuiDrawer-paper {
+    width: 240px;
+    box-sizing: border-box;
+  }
+
+
+@media (max-width: 960px) {
+  .todoForm{
+    width: 100%;
   }
 }
+  @media (max-width: 575px) {
+    .drawer {
+      width: 60px;
+      flex-shrink: 0;
+    }
+
+    .drawer .MuiDrawer-paper {
+      width: 60px;
+      box-sizing: border-box;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .drawer {
+      width: 40px;
+      flex-shrink: 0;
+    }
+
+    .drawer .MuiDrawer-paper {
+      width: 60px;
+      box-sizing: border-box;
+    }
+    .heading{
+      font-size: 23px;
+    }
+    .icons{
+      font-size: 20px !important;
+    }
+    .todoForm > button{
+      width: 18%;
+      font-size: 14px;
+    }
+    .dateDiplay{
+      font-size: 18px !important;
+    }
+  }
